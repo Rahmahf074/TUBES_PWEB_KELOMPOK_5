@@ -1,13 +1,162 @@
+/* Mengimpor file CSS dari Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
+
+/* Mengatur perilaku scroll agar smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary: #28a745;
+  --color-primary-dark: #218838;
+  --color-secondary: #f8f9fa;
+  --color-text: #212529;
+  --color-muted: #6c757d;
+  --transition: all 0.3s ease;
+}
+
 body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text);
+  overflow-x: hidden;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.transition-all {
+  transition: var(--transition);
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  font-size: 18px;
+}
+
+.logo-circle-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 14px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--color-primary);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.nav-link-style {
+  text-decoration: none !important;
+}
+.nav-link-style:hover {
+  text-decoration: none !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.gallery-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gallery-header p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #666;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 260px;
+  width: 100%;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #198754;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
